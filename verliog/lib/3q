@@ -1,0 +1,28 @@
+// Testbench for Full Adder
+module test_FA;
+  // Regs and wires for input/output
+  reg A,B,Ci;
+  wire S,Co;
+
+  //Instantiate your "Device Under Test"
+  full_adder DUT(A,B,Ci,S,Co);
+
+  initial begin
+    // Hooks for vvp/gtkwave
+    // the *.vcd filename should match the *.v filename for Makefile cleanliness
+    $dumpfile("test_fa.vcd"); 
+    $dumpvars(0,test_FA);
+    //pretty formatting
+    $display("A B Ci | S Co");
+    $display("-------------");
+    for (int i=0; i < 8; i=i+1) begin
+      {A,B,Ci} = i;
+      #50
+
+      if (A+B+Ci != {Co,S})
+        $display("%b %b %b  | %b %b FAIL",A,B,Ci,S,Co);
+      else
+        $display("%b %b %b  | %b %b PASS",A,B,Ci,S,Co);
+    end
+  end
+endmodule
