@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module is_2(
+module IS_2(
   input  Tl,T,Tr, L, R, Bl, B,Br, // Input Operands
   output Checked); 
 
