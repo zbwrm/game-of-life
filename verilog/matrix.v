@@ -1,6 +1,6 @@
 `timescale 1ns / 1ps
 
-module MATRIX :
+module MATRIX:
   (input  clk,_rst // Input Operands
   output reg array); 
 
