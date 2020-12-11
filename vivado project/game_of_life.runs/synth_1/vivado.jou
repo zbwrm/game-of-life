@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Dec 11 14:57:43 2020
+# Process ID: 29680
+# Current directory: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/synth_1
+# Command line: vivado.exe -log CELL.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CELL.tcl
+# Log file: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/synth_1/CELL.vds
+# Journal file: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source CELL.tcl -notrace
