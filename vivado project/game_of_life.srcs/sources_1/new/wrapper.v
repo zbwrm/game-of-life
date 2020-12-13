@@ -8,7 +8,11 @@ module WRAPPER (input clk, _rst,
      
     // row is the actual data of each row
     // col is a one-hot encoding of the column that's being displayed this split second
-     
+    
+    wire [7:0] grid [7:0];
+    
+    cells MATRIX(.clk(clk), ._rst(_rst), .grid(grid)); 
+    
     // PINS
     // COLUMNS
     //  JB rightmost 8 pins, counterclockwise (can be changed easily)
@@ -23,5 +27,8 @@ module WRAPPER (input clk, _rst,
     // pass slightly slower clock to GOL matrix so it updates, at most, 2 times/s
     // pass GOL out to row
         // intermediate matrix stage? probably won't need
+    
+    
+    
     
 endmodule

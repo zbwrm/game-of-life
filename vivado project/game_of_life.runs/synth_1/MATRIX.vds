@@ -1,14 +1,14 @@
-
-*** Running vivado
-    with args -log MATRIX.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source MATRIX.tcl
-
-
-
-****** Vivado v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Dec 13 18:21:11 2020
+# Process ID: 21388
+# Current directory: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/synth_1
+# Command line: vivado.exe -log MATRIX.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source MATRIX.tcl
+# Log file: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/synth_1/MATRIX.vds
+# Journal file: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
 source MATRIX.tcl -notrace
 Command: synth_design -top MATRIX -part xc7z010iclg225-1L
 Starting synth_design

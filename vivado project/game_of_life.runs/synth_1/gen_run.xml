@@ -1,61 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010iclg225-1L" LaunchTime="1607716654">
-  <File Type="PA-TCL" Name="CELL.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="CELL_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="CELL_reports.tcl"/>
-  <File Type="RDS-RDS" Name="CELL.vds"/>
-  <File Type="RDS-UTIL" Name="CELL_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="CELL_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="CELL.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="CELL_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="CELL_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7z010iclg225-1L" LaunchTime="1607901667">
+  <File Type="PA-TCL" Name="MATRIX.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="MATRIX_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="MATRIX_reports.tcl"/>
+  <File Type="RDS-RDS" Name="MATRIX.vds"/>
+  <File Type="RDS-UTIL" Name="MATRIX_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="MATRIX_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="MATRIX.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="MATRIX_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="MATRIX_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PPRDIR/../verliog/lib/dff.v">
-      <FileInfo>
+    <File Path="$PPRDIR/../verilog/is_2.v">
+      <FileInfo SFType="SVerilog">
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/is_2.v">
-      <FileInfo>
+    <File Path="$PPRDIR/../verilog/is_3.v">
+      <FileInfo SFType="SVerilog">
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/is_3.v">
-      <FileInfo>
+    <File Path="$PPRDIR/../verilog/lib/dff.v">
+      <FileInfo SFType="SVerilog">
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/cell.v">
-      <FileInfo>
+    <File Path="$PPRDIR/../verilog/cell.v">
+      <FileInfo SFType="SVerilog">
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/lib/csa.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
+    <File Path="$PPRDIR/../verilog/matrix.v">
+      <FileInfo SFType="SVerilog">
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/lib/fa.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../verliog/lib/ha.v">
+    <File Path="$PPRDIR/../verilog/lib/csa.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -63,7 +54,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/lib/ripple.v">
+    <File Path="$PPRDIR/../verilog/lib/fa.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -71,7 +62,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/lib/test/test_csa.v">
+    <File Path="$PPRDIR/../verilog/lib/ha.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -79,7 +70,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/lib/test/test_dff.v">
+    <File Path="$PPRDIR/../verilog/lib/ripple.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -87,7 +78,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/lib/test/test_fa.v">
+    <File Path="$PPRDIR/../verilog/lib/test/test_csa.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -95,7 +86,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/lib/test/test_ha.v">
+    <File Path="$PPRDIR/../verilog/lib/test/test_dff.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -103,7 +94,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/lib/test/test_ripple.v">
+    <File Path="$PPRDIR/../verilog/lib/test/test_fa.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -111,7 +102,31 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../verliog/matrix.v">
+    <File Path="$PPRDIR/../verilog/lib/test/test_ha.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../verilog/lib/test/test_ripple.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/wrapper.v">
+      <FileInfo SFType="SVerilog">
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -121,7 +136,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="CELL"/>
+      <Option Name="TopModule" Val="MATRIX"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
@@ -146,9 +161,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

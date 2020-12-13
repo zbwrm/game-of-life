@@ -1,9 +1,10 @@
 `timescale 1ns / 1ps
 
 module MATRIX (input clk,_rst, // Input Operands
-               output reg grid [0:7][0:7]); 
+               output grid); 
 
   parameter DLY = 5;
+  reg grid [0:7][0:7];
 
   CELL #(.S_0(0)) Tr00(clk, _rst, 0,0,0,0,grid[0][1],0,grid[1][0],grid[1][1],grid[0][0]);
   CELL #(.S_0(0)) Tr07(clk, _rst, 0,0,0,grid[0][6],0,grid[1][6],grid[1][7],0,grid[0][7]);
