@@ -1,11 +1,10 @@
 `timescale 1ns / 1ps
 
-module MATRIX:
-  (input  clk,_rst // Input Operands
-  output reg array); 
+module MATRIX (input clk,_rst, // Input Operands
+               output grid [0:8][0:8]) ; 
 
   parameter DLY = 5;
-  wire array [0:8][0:8];
+ // wire grid [0:8][0:8];
 
   CELL #(.S_0(0)) Tr01(clk, _rst, 0 ,0,0,0,grid[0][1],0,grid[1][0],grid[1][1],grid[0][0]);
   CELL #(.S_0(0)) Tr07(clk, _rst, 0 ,0,0,grid[0][6],0,grid[1][6],grid[1][7],0,grid[0][7]);

@@ -1,9 +1,8 @@
 `timescale 1ns / 1ps
 
 // havent touched verilog in a min, help w syntax?
-module WRAPPER
-    (input clk, _rst
-     output row, col);
+module WRAPPER (input clk, _rst,
+                output row, col);
     
     // HIGH should be 3.3V, not 5V for LED reasons 
      
@@ -25,5 +24,4 @@ module WRAPPER
     // pass GOL out to row
         // intermediate matrix stage? probably won't need
     
-    );
 endmodule
