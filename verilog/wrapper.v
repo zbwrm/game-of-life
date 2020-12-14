@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+`include "lib/tff.v"
 
 // havent touched verilog in a min, help w syntax?
 module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
@@ -23,8 +24,32 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
     reg [7:0] row;
     reg data [7:0];
     reg [9:0] divider;
-    reg matrix_clk = clk; // freq. divide by 512 or 256 (whichever looks better)
+    reg matrix_clk = clk;
+    reg clk_256
+    reg clk_128
+    reg clk_64;
+    reg clk_32;
+    reg clk_16;
+    reg clk_8;
+    reg clk_4;
+    reg clk_2;
+    reg clk_1;
     
+    // freq. divide by 512 or 256 (whichever looks better)
+    
+    TFF #5 to_256(matrix_clk, _rst, 1, clk_256);
+    TFF #5 to_128(clk_256, _rst, 1, clk_128);
+    TFF #5 to_64(clk_128, _rst, 1, clk_64);
+    TFF #5 to_32(clk_64, _rst, 1, clk_32);
+    TFF #5 to_16(clk_32, _rst, 1, clk_16);
+    TFF #5 to_8(clk_16, _rst, 1, clk_8);
+    TFF #5 to_4(clk_8, _rst, 1, clk_4);
+    TFF #5 to_2(clk_4, _rst, 1, clk_2);
+    TFF #5 to_1(clk_2, _rst, 1, clk_1);
+
+
+
+
     MATRIX cells(.clk(matrix_clk), ._rst(_rst), .grid(grid)); 
     
     assign row[0] = row0;
