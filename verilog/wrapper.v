@@ -25,8 +25,8 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
     reg data [7:0];
     reg [9:0] divider;
     reg matrix_clk = clk;
-    reg clk_256
-    reg clk_128
+    reg clk_256;
+    reg clk_128;
     reg clk_64;
     reg clk_32;
     reg clk_16;
