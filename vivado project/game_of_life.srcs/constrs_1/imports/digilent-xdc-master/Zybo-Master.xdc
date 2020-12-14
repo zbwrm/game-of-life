@@ -5,8 +5,8 @@
 
 
 ##Clock signal
-#set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L11P_T1_SRCC_35 Sch=sysclk
-#create_clock -add -name sys_clk_pin -period 8.00 -waveform {0 4} [get_ports { clk }];
+set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L11P_T1_SRCC_35 Sch=sysclk
+create_clock -add -name sys_clk_pin -period 1953125 -waveform {0 976562} [get_ports { clk }];
 
 
 ##Switches
@@ -78,14 +78,14 @@
 
 
 ##Pmod Header JB
-set_property -dict { PACKAGE_PIN T20   IOSTANDARD LVCMOS33 } [get_ports { col[0] }]; #IO_L15P_T2_DQS_34 Sch=JB1_p
-set_property -dict { PACKAGE_PIN U20   IOSTANDARD LVCMOS33 } [get_ports { col[1] }]; #IO_L15N_T2_DQS_34 Sch=JB1_N
-set_property -dict { PACKAGE_PIN V20   IOSTANDARD LVCMOS33 } [get_ports { col[2] }]; #IO_L16P_T2_34 Sch=JB2_P
-set_property -dict { PACKAGE_PIN W20   IOSTANDARD LVCMOS33 } [get_ports { col[3] }]; #IO_L16N_T2_34 Sch=JB2_N
-set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { col[7] }]; #IO_L17P_T2_34 Sch=JB3_P
-set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { col[6] }]; #IO_L17N_T2_34 Sch=JB3_N
-set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { col[5] }]; #IO_L22P_T3_34 Sch=JB4_P
-set_property -dict { PACKAGE_PIN W19   IOSTANDARD LVCMOS33 } [get_ports { col[4] }]; #IO_L22N_T3_34 Sch=JB4_N
+set_property -dict { PACKAGE_PIN T20   IOSTANDARD LVCMOS33 } [get_ports { data[0] }]; #IO_L15P_T2_DQS_34 Sch=JB1_p
+set_property -dict { PACKAGE_PIN U20   IOSTANDARD LVCMOS33 } [get_ports { data[1] }]; #IO_L15N_T2_DQS_34 Sch=JB1_N
+set_property -dict { PACKAGE_PIN V20   IOSTANDARD LVCMOS33 } [get_ports { data[2] }]; #IO_L16P_T2_34 Sch=JB2_P
+set_property -dict { PACKAGE_PIN W20   IOSTANDARD LVCMOS33 } [get_ports { data[3] }]; #IO_L16N_T2_34 Sch=JB2_N
+set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { data[7] }]; #IO_L17P_T2_34 Sch=JB3_P
+set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { data[6] }]; #IO_L17N_T2_34 Sch=JB3_N
+set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { data[5] }]; #IO_L22P_T3_34 Sch=JB4_P
+set_property -dict { PACKAGE_PIN W19   IOSTANDARD LVCMOS33 } [get_ports { data[4] }]; #IO_L22N_T3_34 Sch=JB4_N
 
 
 ##Pmod Header JC
