@@ -5,8 +5,7 @@
 
 
 ##Clock signal
-set_property -dict { PACKAGE_PIN L16   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L11P_T1_SRCC_35 Sch=sysclk
-create_clock -add -name sys_clk_pin -period 1953125 -waveform {0 976562} [get_ports { clk }];
+create_clock -period 1953125.000 -name sys_clk_pin -waveform {0.000 976562.000} -add [get_ports clk]
 
 
 ##Switches
@@ -17,7 +16,6 @@ create_clock -add -name sys_clk_pin -period 1953125 -waveform {0 976562} [get_po
 
 
 ##Buttons
-set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { _rst }]; #IO_L20N_T3_34 Sch=BTN0
 #set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS33 } [get_ports { btn[1] }]; #IO_L24N_T3_34 Sch=BTN1
 #set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { btn[2] }]; #IO_L18P_T2_34 Sch=BTN2
 #set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { btn[3] }]; #IO_L7P_T1_34 Sch=BTN3
@@ -78,25 +76,9 @@ set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { _rst }
 
 
 ##Pmod Header JB
-set_property -dict { PACKAGE_PIN T20   IOSTANDARD LVCMOS33 } [get_ports { data[0] }]; #IO_L15P_T2_DQS_34 Sch=JB1_p
-set_property -dict { PACKAGE_PIN U20   IOSTANDARD LVCMOS33 } [get_ports { data[1] }]; #IO_L15N_T2_DQS_34 Sch=JB1_N
-set_property -dict { PACKAGE_PIN V20   IOSTANDARD LVCMOS33 } [get_ports { data[2] }]; #IO_L16P_T2_34 Sch=JB2_P
-set_property -dict { PACKAGE_PIN W20   IOSTANDARD LVCMOS33 } [get_ports { data[3] }]; #IO_L16N_T2_34 Sch=JB2_N
-set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { data[7] }]; #IO_L17P_T2_34 Sch=JB3_P
-set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { data[6] }]; #IO_L17N_T2_34 Sch=JB3_N
-set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { data[5] }]; #IO_L22P_T3_34 Sch=JB4_P
-set_property -dict { PACKAGE_PIN W19   IOSTANDARD LVCMOS33 } [get_ports { data[4] }]; #IO_L22N_T3_34 Sch=JB4_N
 
 
 ##Pmod Header JC
-set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS33 } [get_ports { row[0] }]; #IO_L10P_T1_34 Sch=JC1_P
-set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS33 } [get_ports { row[1] }]; #IO_L10N_T1_34 Sch=JC1_N
-set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { row[2] }]; #IO_L1P_T0_34 Sch=JC2_P
-set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { row[3] }]; #IO_L1N_T0_34 Sch=JC2_N
-set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { row[7] }]; #IO_L8P_T1_34 Sch=JC3_P
-set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33 } [get_ports { row[6] }]; #IO_L8N_T1_34 Sch=JC3_N
-set_property -dict { PACKAGE_PIN T12   IOSTANDARD LVCMOS33 } [get_ports { row[5] }]; #IO_L2P_T0_34 Sch=JC4_P
-set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { row[4] }]; #IO_L2N_T0_34 Sch=JC4_N
 
 
 ##Pmod Header JD
@@ -144,3 +126,68 @@ set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33 } [get_ports { row[4]
 #set_property -dict { PACKAGE_PIN G19   IOSTANDARD LVCMOS33 } [get_ports { vga_b[4] }]; #IO_L18P_T2_AD13P_35 Sch=VGA_B5
 #set_property -dict { PACKAGE_PIN P19   IOSTANDARD LVCMOS33 } [get_ports vga_hs]; #IO_L13N_T2_MRCC_34 Sch=VGA_HS
 #set_property -dict { PACKAGE_PIN R19   IOSTANDARD LVCMOS33 } [get_ports vga_vs]; #IO_0_34 Sch=VGA_VS
+
+create_generated_clock -name {count_reg[0]_C_n_0} -source [get_ports clk] -divide_by 1 [get_pins {count_reg[0]_C/Q}]
+create_generated_clock -name {count_reg[0]_P_n_0} -source [get_ports clk] -divide_by 1 [get_pins {count_reg[0]_P/Q}]
+create_generated_clock -name {count_reg[1]_C_n_0} -source [get_ports clk] -divide_by 1 [get_pins {count_reg[1]_C/Q}]
+create_generated_clock -name {count_reg[1]_P_n_0} -source [get_ports clk] -divide_by 1 [get_pins {count_reg[1]_P/Q}]
+create_generated_clock -name {count_reg[2]_C_n_0} -source [get_ports clk] -divide_by 1 [get_pins {count_reg[2]_C/Q}]
+create_generated_clock -name {count_reg[2]_P_n_0} -source [get_ports clk] -divide_by 1 [get_pins {count_reg[2]_P/Q}]
+create_generated_clock -name {count_reg[3]_C_n_0} -source [get_ports clk] -divide_by 1 [get_pins {count_reg[3]_C/Q}]
+create_generated_clock -name {count_reg[3]_P_n_0} -source [get_ports clk] -divide_by 1 [get_pins {count_reg[3]_P/Q}]
+set_input_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports _rst]
+set_input_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports _rst]
+set_input_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports _rst]
+set_input_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports _rst]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {data[0]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[0]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {data[1]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[1]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {data[2]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[2]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {data[3]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[3]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {data[4]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[4]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {data[5]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[5]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {data[6]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[6]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {data[7]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[7]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports {row[0]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports {row[0]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {row[0]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[0]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports {row[1]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports {row[1]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {row[1]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[1]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports {row[2]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports {row[2]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {row[2]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[2]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports {row[3]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports {row[3]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {row[3]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[3]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports {row[4]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports {row[4]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {row[4]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[4]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports {row[5]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports {row[5]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {row[5]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[5]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports {row[6]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports {row[6]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {row[6]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[6]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -min -add_delay 0.000 [get_ports {row[7]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -clock_fall -max -add_delay 0.000 [get_ports {row[7]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -min -add_delay 0.000 [get_ports {row[7]}]
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[7]}]
+set_clock_groups -logically_exclusive -group [get_clocks -include_generated_clocks {count_reg[0]_C_n_0}] -group [get_clocks -include_generated_clocks {count_reg[0]_P_n_0}]
+set_clock_groups -logically_exclusive -group [get_clocks -include_generated_clocks {count_reg[1]_C_n_0}] -group [get_clocks -include_generated_clocks {count_reg[1]_P_n_0}]
+set_clock_groups -logically_exclusive -group [get_clocks -include_generated_clocks {count_reg[2]_C_n_0}] -group [get_clocks -include_generated_clocks {count_reg[2]_P_n_0}]
+set_clock_groups -logically_exclusive -group [get_clocks -include_generated_clocks {count_reg[3]_C_n_0}] -group [get_clocks -include_generated_clocks {count_reg[3]_P_n_0}]

@@ -71,6 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 set_param ced.repoPaths C:/Users/aoleary/Documents/Vivado/Downloads/ced_store/Vivado_example_project
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010iclg225-1L

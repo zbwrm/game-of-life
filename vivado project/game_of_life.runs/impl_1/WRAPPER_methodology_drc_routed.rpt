@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sun Dec 13 22:26:51 2020
+| Date         : Sun Dec 13 22:42:43 2020
 | Host         : 51NH7Y2 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file WRAPPER_methodology_drc_routed.rpt -pb WRAPPER_methodology_drc_routed.pb -rpx WRAPPER_methodology_drc_routed.rpx
 | Design       : WRAPPER
@@ -23,17 +23,97 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 50
-+-----------+----------+-------------------------------+------------+
-| Rule      | Severity | Description                   | Violations |
-+-----------+----------+-------------------------------+------------+
-| LUTAR-1   | Warning  | LUT drives async reset alert  | 24         |
-| TIMING-18 | Warning  | Missing input or output delay | 17         |
-| TIMING-20 | Warning  | Non-clocked latch             | 9          |
-+-----------+----------+-------------------------------+------------+
+             Violations found: 57
++-----------+------------------+------------------------------------------+------------+
+| Rule      | Severity         | Description                              | Violations |
++-----------+------------------+------------------------------------------+------------+
+| TIMING-14 | Critical Warning | LUT on the clock tree                    | 16         |
+| LUTAR-1   | Warning          | LUT drives async reset alert             | 24         |
+| XDCH-2    | Warning          | Same min and max delay values on IO port | 17         |
++-----------+------------------+------------------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
+TIMING-14#1 Critical Warning
+LUT on the clock tree  
+The LUT count[0]_C_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Critical Warning
+LUT on the clock tree  
+The LUT count[1]_C_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#3 Critical Warning
+LUT on the clock tree  
+The LUT count[2]_C_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#4 Critical Warning
+LUT on the clock tree  
+The LUT count[3]_C_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#5 Critical Warning
+LUT on the clock tree  
+The LUT count_reg[0]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#6 Critical Warning
+LUT on the clock tree  
+The LUT count_reg[1]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#7 Critical Warning
+LUT on the clock tree  
+The LUT count_reg[2]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#8 Critical Warning
+LUT on the clock tree  
+The LUT count_reg[3]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#9 Critical Warning
+LUT on the clock tree  
+The LUT row_reg[0]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#10 Critical Warning
+LUT on the clock tree  
+The LUT row_reg[1]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#11 Critical Warning
+LUT on the clock tree  
+The LUT row_reg[2]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#12 Critical Warning
+LUT on the clock tree  
+The LUT row_reg[3]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#13 Critical Warning
+LUT on the clock tree  
+The LUT row_reg[4]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#14 Critical Warning
+LUT on the clock tree  
+The LUT row_reg[5]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#15 Critical Warning
+LUT on the clock tree  
+The LUT row_reg[6]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#16 Critical Warning
+LUT on the clock tree  
+The LUT row_reg[7]_LDC_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
 LUTAR-1#1 Warning
 LUT drives async reset alert  
 LUT cell count_reg[0]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) count_reg[0]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
@@ -154,134 +234,123 @@ LUT drives async reset alert
 LUT cell row_reg[7]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) row_reg[7]_C/CLR, row_reg[7]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-TIMING-18#1 Warning
-Missing input or output delay  
-An input delay is missing on _rst relative to clock(s) sys_clk_pin
+XDCH-2#1 Warning
+Same min and max delay values on IO port  
+The same input delay of 0.000 ns has been defined on port '_rst' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_input_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports _rst]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 141)
 Related violations: <none>
 
-TIMING-18#2 Warning
-Missing input or output delay  
-An output delay is missing on data[0] relative to clock(s) sys_clk_pin
+XDCH-2#2 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'data[0]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[0]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 143)
 Related violations: <none>
 
-TIMING-18#3 Warning
-Missing input or output delay  
-An output delay is missing on data[1] relative to clock(s) sys_clk_pin
+XDCH-2#3 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'data[1]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[1]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 145)
 Related violations: <none>
 
-TIMING-18#4 Warning
-Missing input or output delay  
-An output delay is missing on data[2] relative to clock(s) sys_clk_pin
+XDCH-2#4 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'data[2]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[2]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 147)
 Related violations: <none>
 
-TIMING-18#5 Warning
-Missing input or output delay  
-An output delay is missing on data[3] relative to clock(s) sys_clk_pin
+XDCH-2#5 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'data[3]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[3]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 149)
 Related violations: <none>
 
-TIMING-18#6 Warning
-Missing input or output delay  
-An output delay is missing on data[4] relative to clock(s) sys_clk_pin
+XDCH-2#6 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'data[4]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[4]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 151)
 Related violations: <none>
 
-TIMING-18#7 Warning
-Missing input or output delay  
-An output delay is missing on data[5] relative to clock(s) sys_clk_pin
+XDCH-2#7 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'data[5]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[5]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 153)
 Related violations: <none>
 
-TIMING-18#8 Warning
-Missing input or output delay  
-An output delay is missing on data[6] relative to clock(s) sys_clk_pin
+XDCH-2#8 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'data[6]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[6]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 155)
 Related violations: <none>
 
-TIMING-18#9 Warning
-Missing input or output delay  
-An output delay is missing on data[7] relative to clock(s) sys_clk_pin
+XDCH-2#9 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'data[7]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {data[7]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 157)
 Related violations: <none>
 
-TIMING-18#10 Warning
-Missing input or output delay  
-An output delay is missing on row[0] relative to clock(s) sys_clk_pin
+XDCH-2#10 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'row[0]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[0]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 161)
 Related violations: <none>
 
-TIMING-18#11 Warning
-Missing input or output delay  
-An output delay is missing on row[1] relative to clock(s) sys_clk_pin
+XDCH-2#11 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'row[1]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[1]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 165)
 Related violations: <none>
 
-TIMING-18#12 Warning
-Missing input or output delay  
-An output delay is missing on row[2] relative to clock(s) sys_clk_pin
+XDCH-2#12 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'row[2]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[2]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 169)
 Related violations: <none>
 
-TIMING-18#13 Warning
-Missing input or output delay  
-An output delay is missing on row[3] relative to clock(s) sys_clk_pin
+XDCH-2#13 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'row[3]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[3]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 173)
 Related violations: <none>
 
-TIMING-18#14 Warning
-Missing input or output delay  
-An output delay is missing on row[4] relative to clock(s) sys_clk_pin
+XDCH-2#14 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'row[4]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[4]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 177)
 Related violations: <none>
 
-TIMING-18#15 Warning
-Missing input or output delay  
-An output delay is missing on row[5] relative to clock(s) sys_clk_pin
+XDCH-2#15 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'row[5]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[5]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 181)
 Related violations: <none>
 
-TIMING-18#16 Warning
-Missing input or output delay  
-An output delay is missing on row[6] relative to clock(s) sys_clk_pin
+XDCH-2#16 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'row[6]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[6]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 185)
 Related violations: <none>
 
-TIMING-18#17 Warning
-Missing input or output delay  
-An output delay is missing on row[7] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-20#1 Warning
-Non-clocked latch  
-The latch count_reg[0]_LDC cannot be properly analyzed as its control pin count_reg[0]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#2 Warning
-Non-clocked latch  
-The latch row_reg[0]_LDC cannot be properly analyzed as its control pin row_reg[0]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#3 Warning
-Non-clocked latch  
-The latch row_reg[1]_LDC cannot be properly analyzed as its control pin row_reg[1]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#4 Warning
-Non-clocked latch  
-The latch row_reg[2]_LDC cannot be properly analyzed as its control pin row_reg[2]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#5 Warning
-Non-clocked latch  
-The latch row_reg[3]_LDC cannot be properly analyzed as its control pin row_reg[3]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#6 Warning
-Non-clocked latch  
-The latch row_reg[4]_LDC cannot be properly analyzed as its control pin row_reg[4]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch row_reg[5]_LDC cannot be properly analyzed as its control pin row_reg[5]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#8 Warning
-Non-clocked latch  
-The latch row_reg[6]_LDC cannot be properly analyzed as its control pin row_reg[6]_LDC/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#9 Warning
-Non-clocked latch  
-The latch row_reg[7]_LDC cannot be properly analyzed as its control pin row_reg[7]_LDC/G is not reached by a timing clock
+XDCH-2#17 Warning
+Same min and max delay values on IO port  
+The same output delay of 0.000 ns has been defined on port 'row[7]' relative to clock sys_clk_pin for both max and min. Make sure this reflects the design intent.
+set_output_delay -clock [get_clocks sys_clk_pin] -max -add_delay 0.000 [get_ports {row[7]}]
+C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc (Line: 189)
 Related violations: <none>
 
 
