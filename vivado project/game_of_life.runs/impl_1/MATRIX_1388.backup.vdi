@@ -1,0 +1,392 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Dec 13 21:56:36 2020
+# Process ID: 1388
+# Current directory: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/impl_1
+# Command line: vivado.exe -log MATRIX.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source MATRIX.tcl -notrace
+# Log file: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/impl_1/MATRIX.vdi
+# Journal file: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source MATRIX.tcl -notrace
+Command: link_design -top MATRIX -part xc7z010iclg225-1L
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z010iclg225-1L
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 998.953 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc]
+CRITICAL WARNING: [Common 17-69] Command failed: 'L16' is not a valid site or package pin name. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:8]
+WARNING: [Vivado 12-4379] -period contains time 1953125.000000 which cannot be represented in single precision floating point without rounding by more than 1 picosecond [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:9]
+WARNING: [Vivado 12-4379] -waveform contains time 976562.000000 which cannot be represented in single precision floating point without rounding by more than 1 picosecond [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:9]
+WARNING: [Vivado 12-584] No ports matched 'data[0]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data[1]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data[2]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data[3]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data[7]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data[6]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data[5]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'data[4]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:88]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:88]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[0]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[1]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[2]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[3]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[7]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[6]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[5]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'row[4]'. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 998.953 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+5 Infos, 18 Warnings, 17 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:08 . Memory (MB): peak = 998.953 ; gain = 0.000
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010i'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010i'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 998.953 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1223.734 ; gain = 224.781
+
+Starting Logic Optimization Task
+
+Phase 1 Retarget
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 1 Retarget | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1431.063 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
+
+Phase 2 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 2 Constant propagation | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1431.063 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
+
+Phase 3 Sweep
+Phase 3 Sweep | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1431.063 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+
+Phase 4 BUFG optimization
+Phase 4 BUFG optimization | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1431.063 ; gain = 0.000
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 5 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 5 Shift Register Optimization | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1431.063 ; gain = 0.000
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 6 Post Processing Netlist
+Phase 6 Post Processing Netlist | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1431.063 ; gain = 0.000
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |               0  |               0  |                                              0  |
+|  Constant propagation         |               0  |               0  |                                              0  |
+|  Sweep                        |               0  |               0  |                                              0  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                              0  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1431.063 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1431.063 ; gain = 0.000
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+Ending Power Optimization Task | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1431.063 ; gain = 0.000
+
+Starting Final Cleanup Task
+Ending Final Cleanup Task | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1431.063 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1431.063 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 165d6f818
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1431.063 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+22 Infos, 18 Warnings, 17 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1431.063 ; gain = 432.109
+INFO: [Timing 38-480] Writing timing data to binary archive.
+INFO: [Common 17-1381] The checkpoint 'C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/impl_1/MATRIX_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file MATRIX_drc_opted.rpt -pb MATRIX_drc_opted.pb -rpx MATRIX_drc_opted.rpx
+Command: report_drc -file MATRIX_drc_opted.rpt -pb MATRIX_drc_opted.pb -rpx MATRIX_drc_opted.rpx
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file C:/Users/aoleary/Documents/GitHub/game-of-life/vivado project/game_of_life.runs/impl_1/MATRIX_drc_opted.rpt.
+report_drc completed successfully
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z010i'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z010i'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1476.184 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 7c18a8a7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1476.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1476.184 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (64) is greater than number of available sites (54).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  Out  RangeId: 1 Drv: 12  has only 54 sites available on device, but needs 64 sites.
+	Term: grid[0][0]
+	Term: grid[0][1]
+	Term: grid[0][2]
+	Term: grid[0][3]
+	Term: grid[0][4]
+	Term: grid[0][5]
+	Term: grid[0][6]
+	Term: grid[0][7]
+	Term: grid[1][0]
+	Term: grid[1][1]
+	Term: grid[1][2]
+	Term: grid[1][3]
+	Term: grid[1][4]
+	Term: grid[1][5]
+	Term: grid[1][6]
+	Term: grid[1][7]
+	Term: grid[2][0]
+	Term: grid[2][1]
+	Term: grid[2][2]
+	Term: grid[2][3]
+	Term: grid[2][4]
+	Term: grid[2][5]
+	Term: grid[2][6]
+	Term: grid[2][7]
+	Term: grid[3][0]
+	Term: grid[3][1]
+	Term: grid[3][2]
+	Term: grid[3][3]
+	Term: grid[3][4]
+	Term: grid[3][5]
+	Term: grid[3][6]
+	Term: grid[3][7]
+	Term: grid[4][0]
+	Term: grid[4][1]
+	Term: grid[4][2]
+	Term: grid[4][3]
+	Term: grid[4][4]
+	Term: grid[4][5]
+	Term: grid[4][6]
+	Term: grid[4][7]
+	Term: grid[5][0]
+	Term: grid[5][1]
+	Term: grid[5][2]
+	Term: grid[5][3]
+	Term: grid[5][4]
+	Term: grid[5][5]
+	Term: grid[5][6]
+	Term: grid[5][7]
+	Term: grid[6][0]
+	Term: grid[6][1]
+	Term: grid[6][2]
+	Term: grid[6][3]
+	Term: grid[6][4]
+	Term: grid[6][5]
+	Term: grid[6][6]
+	Term: grid[6][7]
+	Term: grid[7][0]
+	Term: grid[7][1]
+	Term: grid[7][2]
+	Term: grid[7][3]
+	Term: grid[7][4]
+	Term: grid[7][5]
+	Term: grid[7][6]
+	Term: grid[7][7]
+
+
+ERROR: [Place 30-58] IO placement is infeasible. Number of unplaced terminals (64) is greater than number of available sites (54).
+The following are banks with available pins: 
+ IO Group: 0 with : SioStd: LVCMOS18   VCCO = 1.8 Termination: 0  TermDir:  Out  RangeId: 1 Drv: 12  has only 54 sites available on device, but needs 64 sites.
+	Term: grid[0][0]
+	Term: grid[0][1]
+	Term: grid[0][2]
+	Term: grid[0][3]
+	Term: grid[0][4]
+	Term: grid[0][5]
+	Term: grid[0][6]
+	Term: grid[0][7]
+	Term: grid[1][0]
+	Term: grid[1][1]
+	Term: grid[1][2]
+	Term: grid[1][3]
+	Term: grid[1][4]
+	Term: grid[1][5]
+	Term: grid[1][6]
+	Term: grid[1][7]
+	Term: grid[2][0]
+	Term: grid[2][1]
+	Term: grid[2][2]
+	Term: grid[2][3]
+	Term: grid[2][4]
+	Term: grid[2][5]
+	Term: grid[2][6]
+	Term: grid[2][7]
+	Term: grid[3][0]
+	Term: grid[3][1]
+	Term: grid[3][2]
+	Term: grid[3][3]
+	Term: grid[3][4]
+	Term: grid[3][5]
+	Term: grid[3][6]
+	Term: grid[3][7]
+	Term: grid[4][0]
+	Term: grid[4][1]
+	Term: grid[4][2]
+	Term: grid[4][3]
+	Term: grid[4][4]
+	Term: grid[4][5]
+	Term: grid[4][6]
+	Term: grid[4][7]
+	Term: grid[5][0]
+	Term: grid[5][1]
+	Term: grid[5][2]
+	Term: grid[5][3]
+	Term: grid[5][4]
+	Term: grid[5][5]
+	Term: grid[5][6]
+	Term: grid[5][7]
+	Term: grid[6][0]
+	Term: grid[6][1]
+	Term: grid[6][2]
+	Term: grid[6][3]
+	Term: grid[6][4]
+	Term: grid[6][5]
+	Term: grid[6][6]
+	Term: grid[6][7]
+	Term: grid[7][0]
+	Term: grid[7][1]
+	Term: grid[7][2]
+	Term: grid[7][3]
+	Term: grid[7][4]
+	Term: grid[7][5]
+	Term: grid[7][6]
+	Term: grid[7][7]
+
+
+ERROR: [Place 30-374] IO placer failed to find a solution
+Below is the partial placement that can be analyzed to see if any constraint modifications will make the IO placement problem easier to solve.
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+|                                                                     IO Placement : Bank Stats                                                                           |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+| Id | Pins  | Terms |                               Standards                                |                IDelayCtrls               |  VREF  |  VCCO  |   VR   | DCI |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|  0 |     0 |     0 |                                                                        |                                          |        |        |        |     |
+| 34 |    46 |     0 |                                                                        |                                          |        |        |        |     |
+| 35 |     8 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+|    |    54 |     0 |                                                                        |                                          |        |        |        |     |
++----+-------+-------+------------------------------------------------------------------------+------------------------------------------+--------+--------+--------+-----+
+
+IO Placement:
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+| BankId |             Terminal | Standard        | Site                 | Pin                  | Attributes           |
++--------+----------------------+-----------------+----------------------+----------------------+----------------------+
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 7c18a8a7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.110 . Memory (MB): peak = 1476.184 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 7c18a8a7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1476.184 ; gain = 0.000
+ERROR: [Place 30-99] Placer failed with error: 'IO Clock Placer failed'
+Please review all ERROR, CRITICAL WARNING, and WARNING messages during placement to understand the cause for failure.
+Ending Placer Task | Checksum: 7c18a8a7
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.112 . Memory (MB): peak = 1476.184 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+40 Infos, 18 Warnings, 17 Critical Warnings and 5 Errors encountered.
+place_design failed
+ERROR: [Common 17-69] Command failed: Placer could not place all instances
+INFO: [Common 17-206] Exiting Vivado at Sun Dec 13 21:57:05 2020...

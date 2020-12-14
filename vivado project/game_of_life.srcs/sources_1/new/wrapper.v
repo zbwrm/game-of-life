@@ -20,11 +20,11 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
     wire grid [7:0][7:0];
     reg [3:0] count;
     reg [9:0] divider;
-    reg matrix_clk = clk; // freq. divide by 512 or 256 (whichever looks better
+    reg matrix_clk = clk; // freq. divide by 512 or 256 (whichever looks better)
     
-    cells MATRIX(.clk(matrix_clk), ._rst(_rst), .grid(grid)); 
+    MATRIX cells(.clk(matrix_clk), ._rst(_rst), .grid(grid)); 
     
-    always @ (posedge clk, negedge clk) begin
+    always @ (clk) begin
         divider <= divider + 1;
         if (divider == 256) begin
             divider <= 0;
