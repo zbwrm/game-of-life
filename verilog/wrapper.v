@@ -24,7 +24,6 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
     reg [7:0] row;
     reg data [7:0];
     reg [9:0] divider;
-    reg matrix_clk = clk;
     reg clk_256;
     reg clk_128;
     reg clk_64;
@@ -37,7 +36,7 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
     
     // freq. divide by 512 or 256 (whichever looks better)
     
-    TFF #5 to_256(matrix_clk, _rst, 1, clk_256);
+    TFF #5 to_256(clk, _rst, 1, clk_256);
     TFF #5 to_128(clk_256, _rst, 1, clk_128);
     TFF #5 to_64(clk_128, _rst, 1, clk_64);
     TFF #5 to_32(clk_64, _rst, 1, clk_32);
@@ -50,7 +49,7 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
 
 
 
-    MATRIX cells(.clk(matrix_clk), ._rst(_rst), .grid(grid)); 
+    MATRIX cells(.clk(clk_1), ._rst(_rst), .grid(grid)); 
     
     assign row[0] = row0;
     assign row[1] = row1;
@@ -69,14 +68,6 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
     assign data[5] = data5;
     assign data[6] = data6;
     assign data[7] = data7;
-    
-    always @ (clk) begin
-        divider <= divider + 1;
-        if (divider == 256) begin
-            divider <= 0;
-            matrix_clk <= ~matrix_clk;
-        end
-    end
     
     always @ (posedge clk, negedge _rst) begin
         if (~_rst) begin
