@@ -3,11 +3,13 @@
 module IS_2(
   input  Tl,T,Tr, L, R, Bl, B,Br, // Input Operands
   output Checked); 
-
-  reg total;
+  
+  wire [3:0] total;
   total = Tl + T + Tr + L + R + Bl + B + Br;
   
-  always @ (clk) begin
-    assign Checked = (total == 3);
+  if (total == 2) begin 
+    Checked = 1; 
+  end else begin
+    Checked = 0;
   end
 endmodule
