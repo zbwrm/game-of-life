@@ -2,12 +2,12 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Dec 14 01:30:28 2020
-# Process ID: 19600
-# Current directory: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1
+# Start of session at: Mon Dec 14 19:07:48 2020
+# Process ID: 29992
+# Current directory: C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1
 # Command line: vivado.exe -log WRAPPER.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source WRAPPER.tcl
-# Log file: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1/WRAPPER.vds
-# Journal file: C:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1\vivado.jou
+# Log file: C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1/WRAPPER.vds
+# Journal file: C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source WRAPPER.tcl -notrace
 Command: synth_design -top WRAPPER -part xc7z010clg400-1
@@ -17,12 +17,266 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21596
-ERROR: [Synth 8-1766] cannot open include file lib/tff.v [C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/wrapper.v:2]
-INFO: [Synth 8-2350] module WRAPPER ignored due to previous errors [C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/wrapper.v:5]
-Failed to read verilog 'C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/wrapper.v'
+INFO: [Synth 8-7075] Helper process launched with PID 29456
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module DFF [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v:4]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module TFF [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/tff.v:4]
+CRITICAL WARNING: [Synth 8-2490] overwriting previous definition of module DFF [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v:4]
+WARNING: [Synth 8-2507] parameter declaration becomes local in CELL with formal parameter declaration list [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/cell.v:12]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 999.234 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'WRAPPER' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:5]
+INFO: [Synth 8-6157] synthesizing module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/tff.v:4]
+	Parameter W bound to: 5 - type: integer 
+	Parameter INITVAL bound to: 0 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'DFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v:4]
+	Parameter W bound to: 5 - type: integer 
+	Parameter INITVAL bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DFF' (1#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'TFF' (2#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/tff.v:4]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:41]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:42]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:43]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:44]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:45]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:46]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:47]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:48]
+WARNING: [Synth 8-689] width (1) of port connection 'Q' does not match port width (5) of module 'TFF' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:49]
+INFO: [Synth 8-6157] synthesizing module 'MATRIX' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/matrix.v:3]
+	Parameter DLY bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'CELL' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/cell.v:7]
+	Parameter S_0 bound to: 1 - type: integer 
+	Parameter DLY bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'IS_2' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/is_2.v:3]
+	Parameter DLY bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'IS_2' (3#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/is_2.v:3]
+INFO: [Synth 8-6157] synthesizing module 'IS_3' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/is_3.v:3]
+	Parameter DLY bound to: 5 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'IS_3' (4#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/is_3.v:3]
+INFO: [Synth 8-6157] synthesizing module 'DFF__parameterized0' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v:4]
+	Parameter W bound to: 1 - type: integer 
+	Parameter INITVAL bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DFF__parameterized0' (4#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v:4]
+INFO: [Synth 8-226] default block is never used [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/cell.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'CELL' (5#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/cell.v:7]
+INFO: [Synth 8-6157] synthesizing module 'CELL__parameterized0' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/cell.v:7]
+	Parameter S_0 bound to: 0 - type: integer 
+	Parameter DLY bound to: 5 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'DFF__parameterized1' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v:4]
+	Parameter W bound to: 1 - type: integer 
+	Parameter INITVAL bound to: 0 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DFF__parameterized1' (5#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v:4]
+INFO: [Synth 8-226] default block is never used [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/cell.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'CELL__parameterized0' (5#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/cell.v:7]
+INFO: [Synth 8-6155] done synthesizing module 'MATRIX' (6#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/matrix.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'WRAPPER' (7#1) [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v:5]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 999.234 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 999.234 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 999.234 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 999.234 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc]
+WARNING: [Vivado 12-4379] -period contains time 1953125.000000 which cannot be represented in single precision floating point without rounding by more than 1 picosecond [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:9]
+WARNING: [Vivado 12-4379] -waveform contains time 976562.000000 which cannot be represented in single precision floating point without rounding by more than 1 picosecond [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:9]
+Finished Parsing XDC File [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/WRAPPER_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/WRAPPER_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1015.652 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1015.652 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1015.652 ; gain = 16.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1015.652 ; gain = 16.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1015.652 ; gain = 16.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1015.652 ; gain = 16.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 9     
+	  28 Input      1 Bit         XORs := 64    
+	  56 Input      1 Bit         XORs := 64    
++---Registers : 
+	                8 Bit    Registers := 1     
+	                5 Bit    Registers := 9     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 72    
++---Muxes : 
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 80    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1015.652 ; gain = 16.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-681] value '1953125000.0ps' out of range, cropping to '214748368.0ps' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:9]
+WARNING: [Synth 8-681] value '976562000.0ps' out of range, cropping to '214748368.0ps' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:9]
+WARNING: [Synth 8-681] value '1953125000.0ps' out of range, cropping to '214748368.0ps' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:9]
+WARNING: [Synth 8-681] value '976562000.0ps' out of range, cropping to '214748368.0ps' [C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc:9]
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1015.652 ; gain = 16.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:21 . Memory (MB): peak = 1015.652 ; gain = 16.418
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1033.301 ; gain = 34.066
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.621 ; gain = 43.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.621 ; gain = 43.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.621 ; gain = 43.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.621 ; gain = 43.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.621 ; gain = 43.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.621 ; gain = 43.387
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |BUFG  |     3|
+|2     |LUT1  |    12|
+|3     |LUT3  |    30|
+|4     |LUT4  |     6|
+|5     |LUT5  |    92|
+|6     |LUT6  |   273|
+|7     |MUXF7 |    36|
+|8     |FDCE  |    73|
+|9     |FDPE  |    40|
+|10    |LDC   |    20|
+|11    |IBUF  |     2|
+|12    |OBUF  |    16|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.621 ; gain = 43.387
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 1042.621 ; gain = 26.969
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1042.621 ; gain = 43.387
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1042.621 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 56 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1042.621 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 20 instances were transformed.
+  LDC => LDCE: 20 instances
+
 INFO: [Common 17-83] Releasing license: Synthesis
-7 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
-synth_design failed
-ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 14 01:30:41 2020...
+37 Infos, 16 Warnings, 3 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:31 . Memory (MB): peak = 1042.621 ; gain = 43.387
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1/WRAPPER.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file WRAPPER_utilization_synth.rpt -pb WRAPPER_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 14 19:08:21 2020...

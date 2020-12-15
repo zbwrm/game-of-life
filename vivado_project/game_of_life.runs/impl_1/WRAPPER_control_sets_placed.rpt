@@ -1,0 +1,148 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Dec 14 19:08:52 2020
+| Host         : DESKTOP-VKQ7EPH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file WRAPPER_control_sets_placed.rpt
+| Design       : WRAPPER
+| Device       : xc7z010
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    70 |
+|    Minimum number of control sets                        |    70 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   483 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    70 |
+| >= 0 to < 4        |    69 |
+| >= 4 to < 6        |     0 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               0 |            0 |
+| No           | No                    | Yes                    |             113 |          105 |
+| No           | Yes                   | No                     |              20 |           20 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |               0 |            0 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------+---------------+--------------------------------------+------------------+----------------+--------------+
+|             Clock Signal            | Enable Signal |           Set/Reset Signal           | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------+---------------+--------------------------------------+------------------+----------------+--------------+
+|  count_reg[1]_LDC_i_1_n_0           |               | count_reg[1]_LDC_i_2_n_0             |                1 |              1 |         1.00 |
+|  count_reg[0]_LDC_i_1_n_0           |               | count_reg[0]_LDC_i_2_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | count_reg[1]_LDC_i_1_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | count_reg[0]_LDC_i_2_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | count_reg[0]_LDC_i_1_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | count_reg[1]_LDC_i_2_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | count_reg[3]_LDC_i_1_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | count_reg[2]_LDC_i_1_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | count_reg[2]_LDC_i_2_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | count_reg[3]_LDC_i_2_n_0             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[6]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[7]_LDC_i_1_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[7]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[1]_LDC_i_1_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[3]_LDC_i_1_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[2]_LDC_i_1_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[0]_LDC_i_1_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[3]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[1]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[4]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[5]_LDC_i_1_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[5]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[2]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[6]_LDC_i_1_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[4]_LDC_i_1_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | row_reg[0]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr42/dff_stat/count_reg[2]_C   |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr42/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr43/dff_stat/count_reg[2]_C   |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr43/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr47/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr47/dff_stat/count_reg[2]_C   |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr40/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr40/dff_stat/count_reg[2]_C   |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr41/dff_stat/count_reg[2]_C   |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr41/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr44/dff_stat/count_reg[2]_C   |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr44/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr45/dff_stat/count_reg[2]_C   |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr45/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr46/dff_stat/count_reg[2]_C   |                1 |              1 |         1.00 |
+|  clk_2_BUFG                         |               | cells/Tr46/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_IBUF_BUFG                      |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  count_reg[3]_LDC_i_1_n_0           |               | count_reg[3]_LDC_i_2_n_0             |                1 |              1 |         1.00 |
+|  count_reg[2]_LDC_i_1_n_0           |               | count_reg[2]_LDC_i_2_n_0             |                1 |              1 |         1.00 |
+|  row_reg[7]_LDC_i_1_n_0             |               | row_reg[7]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  row_reg[1]_LDC_i_1_n_0             |               | row_reg[1]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  row_reg[3]_LDC_i_1_n_0             |               | row_reg[3]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  row_reg[2]_LDC_i_1_n_0             |               | row_reg[2]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  row_reg[0]_LDC_i_1_n_0             |               | row_reg[0]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  row_reg[5]_LDC_i_1_n_0             |               | row_reg[5]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  row_reg[6]_LDC_i_1_n_0             |               | row_reg[6]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  row_reg[4]_LDC_i_1_n_0             |               | row_reg[4]_LDC_i_2_n_0               |                1 |              1 |         1.00 |
+|  to_256/dff_xor/clk_256             |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  to_128/dff_xor/clk_128             |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  to_16/dff_xor/clk_16               |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  to_8/dff_xor/clk_8                 |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  to_32/dff_xor/clk_32               |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  to_4/dff_xor/clk_4                 |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  to_64/dff_xor/clk_64               |               | cells/Tr57/dff_stat/_rst             |                1 |              1 |         1.00 |
+|  cells/Tr42/dff_stat/count_reg[2]_C |               | cells/Tr42/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  cells/Tr43/dff_stat/count_reg[2]_C |               | cells/Tr43/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  cells/Tr47/dff_stat/count_reg[2]_C |               | cells/Tr47/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  cells/Tr40/dff_stat/count_reg[2]_C |               | cells/Tr40/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  cells/Tr41/dff_stat/count_reg[2]_C |               | cells/Tr41/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  cells/Tr44/dff_stat/count_reg[2]_C |               | cells/Tr44/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  cells/Tr45/dff_stat/count_reg[2]_C |               | cells/Tr45/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  cells/Tr46/dff_stat/count_reg[2]_C |               | cells/Tr46/dff_stat/count_reg[2]_C_0 |                1 |              1 |         1.00 |
+|  clk_1_BUFG                         |               | cells/Tr57/dff_stat/_rst             |               56 |             64 |         1.14 |
++-------------------------------------+---------------+--------------------------------------+------------------+----------------+--------------+
+
+

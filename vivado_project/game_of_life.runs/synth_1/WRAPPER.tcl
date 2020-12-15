@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1/WRAPPER.tcl"
+  variable script "C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.runs/synth_1/WRAPPER.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,37 +70,37 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param ced.repoPaths C:/Users/aoleary/Documents/Vivado/Downloads/ced_store/Vivado_example_project
-set_msg_config -id {Common 17-41} -limit 10000000
+set_param chipscope.maxJobs 8
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir C:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.cache/wt [current_project]
-set_property parent.project_path C:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.cache/wt [current_project]
+set_property parent.project_path C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property board_part_repo_paths {C:/Users/aoleary/Documents/Vivado/Downloads/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
-set_property ip_output_repo c:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.cache/ip [current_project]
+set_property ip_output_repo c:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog {
-  C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/is_2.v
-  C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/is_3.v
-  C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/lib/dff.v
+  C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/is_2.v
+  C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v
+  C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/is_3.v
 }
-set_property file_type "Verilog Header" [get_files C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/is_2.v]
-set_property file_type "Verilog Header" [get_files C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/is_3.v]
-set_property file_type "Verilog Header" [get_files C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/lib/dff.v]
+set_property file_type "Verilog Header" [get_files C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/is_2.v]
+set_property file_type "Verilog Header" [get_files C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/dff.v]
+set_property file_type "Verilog Header" [get_files C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/is_3.v]
 read_verilog -library xil_defaultlib -sv {
-  C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/matrix.v
-  C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/wrapper.v
+  C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/matrix.v
+  C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/lib/tff.v
+  C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/wrapper.v
 }
-read_verilog -library xil_defaultlib C:/Users/aoleary/Documents/GitHub/game-of-life/verilog/cell.v
+read_verilog -library xil_defaultlib C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/verilog/cell.v
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -110,8 +110,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc C:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc
-set_property used_in_implementation false [get_files C:/Users/aoleary/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc]
+read_xdc C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/sammy/OneDrive/Documents/GitHub/game-of-life/vivado_project/game_of_life.srcs/constrs_1/imports/digilent-xdc-master/Zybo-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
