@@ -4,7 +4,7 @@ module IS_3(
   input  Tl,T,Tr, L, R, Bl, B,Br, // Input Operands
   output Checked); 
 
-  parameter DLY = 5;
+  parameter DLY = 1;
   wire c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
   wire c11,c12,c13,c14,c15,c16,c17,c18;
   wire c19,c20,c21,c22,c23,c24,c25,c26;
@@ -12,6 +12,18 @@ module IS_3(
   wire c35,c36,c37,c38,c39,c40,c41,c42,c43;
   wire c44, c45,c46,c47,c48,c49,c50,c51,c52;
   wire c53,c54,c55,c56;
+  
+  wire xor1, xor2, xor3, xor4, xor5;
+  wire xor6, xor7, xor8, xor9, xor10;
+  wire xor11, xor12, xor13, xor14, xor15;
+  wire xor16, xor17, xor18, xor19, xor20;
+  wire xor21, xor22, xor23, xor24, xor25;
+  wire xor26, xor27, xor28, xor29, xor30;
+  wire xor31, xor32, xor33, xor34, xor35;
+  wire xor36, xor37, xor38, xor39, xor40;
+  wire xor41, xor42, xor43, xor44, xor45;
+  wire xor46, xor47, xor48, xor49, xor50;
+  wire xor51, xor52, xor53, xor54;
 
   and #DLY G1(c1,Tl,T,Tr);
   and #DLY G2(c2,Tl,T,L);
@@ -70,8 +82,59 @@ module IS_3(
   and #DLY G55(c55,R,B,Br);
   and #DLY G56(c56,Bl,B,Br);
   
-  xor #DLY big_xor(Checked,c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,
-  c19,c20,c21,c22,c23,c24,c25,c26, c27, c28,c29,c30,c31,c32,c33,c34,c35,c36,c37,c38,
-  c39,c40,c41,c42,c43,c44, c45,c46,c47,c48,c49,c50,c51,c52,c53,c54,c55,c56);
-
+  xor #DLY xor_gate1(xor1, c1, c2);
+  xor #DLY xor_gate2(xor2, c3, xor1);
+  xor #DLY xor_gate3(xor3, c4, xor2);
+  xor #DLY xor_gate4(xor4, c5, xor3);
+  xor #DLY xor_gate5(xor5, c6, xor4);
+  xor #DLY xor_gate6(xor6, c7, xor5);
+  xor #DLY xor_gate7(xor7, c8, xor6);
+  xor #DLY xor_gate8(xor8, c9, xor7);
+  xor #DLY xor_gate9(xor9, c10, xor8);
+  xor #DLY xor_gate10(xor10, c11, xor9);
+  xor #DLY xor_gate11(xor11, c12, xor10);
+  xor #DLY xor_gate12(xor12, c13, xor11);
+  xor #DLY xor_gate13(xor13, c14, xor12);
+  xor #DLY xor_gate14(xor14, c15, xor13);
+  xor #DLY xor_gate15(xor15, c16, xor14);
+  xor #DLY xor_gate16(xor16, c17, xor15);
+  xor #DLY xor_gate17(xor17, c18, xor16);
+  xor #DLY xor_gate18(xor18, c19, xor17);
+  xor #DLY xor_gate19(xor19, c20, xor18);
+  xor #DLY xor_gate20(xor20, c21, xor19);
+  xor #DLY xor_gate21(xor21, c22, xor20);
+  xor #DLY xor_gate22(xor22, c23, xor21);
+  xor #DLY xor_gate23(xor23, c24, xor22);
+  xor #DLY xor_gate24(xor24, c25, xor23);
+  xor #DLY xor_gate25(xor25, c26, xor24);
+  xor #DLY xor_gate26(xor26, c27, xor25);
+  xor #DLY xor_gate27(xor27, c28, xor26);
+  xor #DLY xor_gate28(xor28, c29, xor27);
+  xor #DLY xor_gate29(xor29, c30, xor28);
+  xor #DLY xor_gate30(xor30, c31, xor29);
+  xor #DLY xor_gate31(xor31, c32, xor30);
+  xor #DLY xor_gate32(xor32, c33, xor31);
+  xor #DLY xor_gate33(xor33, c34, xor32);
+  xor #DLY xor_gate34(xor34, c35, xor33);
+  xor #DLY xor_gate35(xor35, c36, xor34);
+  xor #DLY xor_gate36(xor36, c37, xor35);
+  xor #DLY xor_gate37(xor37, c38, xor36);
+  xor #DLY xor_gate38(xor38, c39, xor37);
+  xor #DLY xor_gate39(xor39, c40, xor38);
+  xor #DLY xor_gate40(xor40, c41, xor39);
+  xor #DLY xor_gate41(xor41, c42, xor40);
+  xor #DLY xor_gate42(xor42, c43, xor41);
+  xor #DLY xor_gate43(xor43, c44, xor42);
+  xor #DLY xor_gate44(xor44, c45, xor43);
+  xor #DLY xor_gate45(xor45, c46, xor44);
+  xor #DLY xor_gate46(xor46, c47, xor45);
+  xor #DLY xor_gate47(xor47, c48, xor46);
+  xor #DLY xor_gate48(xor48, c49, xor47);
+  xor #DLY xor_gate49(xor49, c50, xor48);
+  xor #DLY xor_gate50(xor50, c51, xor49);
+  xor #DLY xor_gate51(xor51, c52, xor50);
+  xor #DLY xor_gate52(xor52, c53, xor51);
+  xor #DLY xor_gate53(xor53, c54, xor52);
+  xor #DLY xor_gate54(xor54, c55, xor53);
+  xor #DLY xor_gate55(Checked, c56, xor54);
 endmodule
