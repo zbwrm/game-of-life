@@ -5,7 +5,7 @@
 // Simple fake CPU testbench sequence
 //------------------------------------------------------------------------
 
-module matrix_test ();
+module test_matrix ();
 
   reg clk;
   reg reset;
