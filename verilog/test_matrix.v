@@ -13,7 +13,7 @@ module test_matrix;
   parameter CLK = 100;
   // Clock generation
   initial clk=0;
-  always #10000000000 clk = !clk;
+  always #1000 clk = !clk;
 
 
   
@@ -25,14 +25,18 @@ module test_matrix;
 
     $dumpfile("test_matrix.vcd");
     $dumpvars(0, test_matrix);
+    reset = 1'b0;
 
-   // clk = 1'b0;
- //   reset = 1'b0;
+    #10;
+    reset = 1'b1;
 
-    //#40;
-    //for (int i = 0; i < 4; i = i+1) begin
 
-      //#(2*CLK);
+    clk = 1'b0;
+
+    #40;
+    for (int i = 0; i < 30; i = i+1) begin
+
+      #(2*CLK);
       $display("-----------------------");
       $display("%b %b %b %b %b %b %b %b", grid[0][0], grid[0][1], grid[0][2], grid[0][3], grid[0][4], grid[0][5], grid[0][6], grid[0][7]);
       $display("%b %b %b %b %b %b %b %b", grid[1][0], grid[1][1], grid[1][2], grid[1][3], grid[1][4], grid[1][5], grid[1][6], grid[1][7]);

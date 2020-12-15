@@ -22,10 +22,10 @@ module CELL
   IS_3 check_3(Tl, T, Tr, L, R, Bl, B, Br, is_3);
   DFF #(.INITVAL(S_0)) dff_stat(.clk(clk), ._rst(_rst), .D(prev_stat), .Q(Status));
   
-  always @* begin
+  always @ (posedge clk or negedge clk) begin
     case (Status)
-      1'b0:  begin prev_stat = is_3; end
-      1'b1:  begin prev_stat = both_2_3; end
+      1'b0:  prev_stat = is_3;
+      1'b1:  prev_stat = both_2_3;
       default: /* default catch */;
     endcase
   end
