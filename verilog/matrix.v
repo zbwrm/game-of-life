@@ -1,8 +1,8 @@
 `include "cell.v"
 `timescale 1ns / 1ps
-
+ 
 module MATRIX (input clk,_rst, // Input Operands
-               output reg [0:7][0:7] grid); 
+               output reg grid [0:7][0:7]); 
 
   parameter DLY = 5;
 
