@@ -20,7 +20,7 @@ module CELL
 
   IS_2 check_2(Tl, T, Tr, L, R, Bl, B, Br, is_2);
   IS_3 check_3(Tl, T, Tr, L, R, Bl, B, Br, is_3);
-  DFF #(.INITVAL(S_0))dff_stat(.clk(clk), ._rst(_rst), .D(prev_stat), .Q(Status));
+  DFF #(.INITVAL(S_0)) dff_stat(.clk(clk), ._rst(_rst), .D(prev_stat), .Q(Status));
   
   always @* begin
     case (Status)

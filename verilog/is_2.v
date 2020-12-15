@@ -10,8 +10,17 @@ module IS_2(
   wire c19,c20,c21,c22,c23,c24,c25,c26;
   wire c27, c28;
 
+  wire xor1, xor2, xor3;
+  wire xor4, xor5, xor6;
+  wire xor7, xor8, xor9;
+  wire xor10, xor11, xor12;
+  wire xor13, xor14, xor15;
+  wire xor16, xor17, xor18;
+  wire xor19, xor20, xor21;
+  wire xor22, xor23, xor24;
+  wire xor25, xor26, xor27;
+  
   and #DLY G1(c1,Tl,T);
-
   and #DLY G2(c2,Tl,Tr);
   and #DLY G3(c3,Tl,L);
   and #DLY G4(c4,Tl,R);
@@ -40,7 +49,32 @@ module IS_2(
   and #DLY G27(c27,Bl,Br);
   and #DLY G28(c28,B,Br);
   
-  xor #DLY G29(Checked, c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11,c12,c13,c14,c15,c16,c17,c18,
-  c19,c20,c21,c22,c23,c24,c25,c26, c27, c28);
+  xor #DLY check1(xor1, c1, c2);
+  xor #DLY check2(xor2, c3, xor1);
+  xor #DLY check3(xor3, c4, xor2);
+  xor #DLY check4(xor4, c5, xor3);
+  xor #DLY check5(xor5, c6, xor4);
+  xor #DLY check6(xor6, c7, xor5);
+  xor #DLY check7(xor7, c8, xor6);
+  xor #DLY check8(xor8, c9, xor7);
+  xor #DLY check9(xor9, c10, xor8);
+  xor #DLY check10(xor10, c11, xor9);
+  xor #DLY check11(xor11, c12, xor10);
+  xor #DLY check12(xor12, c13, xor11);
+  xor #DLY check13(xor13, c14, xor12);
+  xor #DLY check14(xor14, c15, xor13);
+  xor #DLY check15(xor15, c16, xor14);
+  xor #DLY check16(xor16, c17, xor15);
+  xor #DLY check17(xor17, c18, xor16);
+  xor #DLY check18(xor18, c19, xor17);
+  xor #DLY check19(xor19, c20, xor18);
+  xor #DLY check20(xor20, c21, xor19);
+  xor #DLY check21(xor21, c22, xor20);
+  xor #DLY check22(xor22, c23, xor21);
+  xor #DLY check23(xor23, c24, xor22);
+  xor #DLY check24(xor24, c25, xor23);
+  xor #DLY check25(xor25, c26, xor24);
+  xor #DLY check26(xor26, c27, xor25);
+  xor #DLY check27(Checked, c27, xor26);
 
 endmodule

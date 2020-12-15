@@ -2,7 +2,7 @@
 `timescale 1ns / 1ps
  
 module MATRIX (input clk,_rst, // Input Operands
-               output reg grid [0:7][0:7]); 
+               output  grid[0:7][0:7]); 
 
   parameter DLY = 5;
 
