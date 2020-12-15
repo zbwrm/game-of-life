@@ -18,8 +18,8 @@ module CELL
   
   or #DLY alive(both_2_3, is_2, is_3);
 
-  IS_2 #DLY check_2(Tl, T, Tr, L, R, Bl, B, Br, is_2);
-  IS_3 #DLY check_3(Tl, T, Tr, L, R, Bl, B, Br, is_3);
+  IS_2 check_2(Tl, T, Tr, L, R, Bl, B, Br, is_2);
+  IS_3 check_3(Tl, T, Tr, L, R, Bl, B, Br, is_3);
   DFF #(.INITVAL(S_0))dff_stat(.clk(clk), ._rst(_rst), .D(prev_stat), .Q(Status));
   
   always @* begin

@@ -7,7 +7,7 @@
 IVERILOG=iverilog -Wall -g2012
 VVP=vvp
 
-#INCLUDES=fa.v ha.v ripple.v csa.v dff.v accumulator.v array_mult.v fib_accum.v
+INCLUDES=tff.v is_2.v is_3.v cell.v dff.v matrix.v
 # CHANGE THIS ^^^^
 # Look up .PHONY rules for Makefiles
 .PHONY: clean
