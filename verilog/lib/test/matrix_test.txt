@@ -1,0 +1,29 @@
+`include "matrix.v"
+`timescale 1ns / 1ps
+
+//------------------------------------------------------------------------
+// Simple fake CPU testbench sequence
+//------------------------------------------------------------------------
+
+module matrix_test ();
+
+  reg clk;
+  reg reset;
+  reg grid [0:7][0:7];
+
+  // Clock generation
+  initial clk=0;
+  always #10000000000 clk = !clk;
+
+  
+
+  // Instantiate fake matrix
+  MATRIX matrix(.clk(clk),._rst(reset), .grid(grid));
+
+  // Test sequence
+  initial begin
+    always @ (posedge clk) begin
+      $display(%b, grid);
+    end
+  end
+endmodule
