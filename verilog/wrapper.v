@@ -5,7 +5,7 @@
 module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
 //                output row0, row1, row2, row3, row4, row5, row6, row7, // output reg row [7:0],
 //                output data0, data1, data2, data3, data4, data5, data6, data7); // output reg data [7:0]);
-                output reg [7:0] row,   reg data_inv [7:0]);
+                output reg [7:0] row, reg [7:0] data_inv);
         
     // PINS
     // DATA
@@ -20,8 +20,8 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
      
     
     
-    wire grid [7:0][7:0];
-    reg data [7:0];
+    wire [7:0][7:0] grid;
+    reg [7:0] data;
     reg [3:0] count;
 //    reg [7:0] row;
 //    reg data [7:0];
@@ -76,7 +76,7 @@ module WRAPPER (input clk, _rst, // clock coming from system is 512Hz
     always @ (posedge clk_2, negedge _rst) begin
         if (~_rst) begin
             row[count] <= 1;
-            data <= grid[count];
+            data <= grid[count][7:0];
             count <= count + 1;
             row[count-1] <= 0;
             if (count == 8) begin
