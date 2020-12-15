@@ -36,7 +36,7 @@ module test_matrix;
     #40;
     for (int i = 0; i < 30; i = i+1) begin
 
-      #(2*CLK);
+      #(20*CLK);
       $display("-----------------------");
       $display("%b %b %b %b %b %b %b %b", grid[0][0], grid[0][1], grid[0][2], grid[0][3], grid[0][4], grid[0][5], grid[0][6], grid[0][7]);
       $display("%b %b %b %b %b %b %b %b", grid[1][0], grid[1][1], grid[1][2], grid[1][3], grid[1][4], grid[1][5], grid[1][6], grid[1][7]);

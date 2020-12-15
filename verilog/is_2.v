@@ -4,7 +4,7 @@ module IS_2(
   input  Tl,T,Tr, L, R, Bl, B,Br, // Input Operands
   output Checked); 
 
-  parameter DLY = 5;
+  parameter DLY = 1;
   wire c1,c2,c3,c4,c5,c6,c7,c8,c9,c10;
   wire c11,c12,c13,c14,c15,c16,c17,c18;
   wire c19,c20,c21,c22,c23,c24,c25,c26;
@@ -75,6 +75,6 @@ module IS_2(
   xor #DLY check24(xor24, c25, xor23);
   xor #DLY check25(xor25, c26, xor24);
   xor #DLY check26(xor26, c27, xor25);
-  xor #DLY check27(Checked, c27, xor26);
-
+  xor #DLY check27(xor27, c28, xor26);
+  xor #DLY check28(Checked, 1'b1, xor27);
 endmodule
