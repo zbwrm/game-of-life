@@ -28,10 +28,10 @@ _note: initial conditions of the GOL can be changed in the `matrix.v` file_
 
 ## Deliverables
 ### Minimum
- - Code a functional Verilog implementation of Conway's Game of Life
- - Code a functional Python implentation of Conway's Game of Life
+ - [CHECK] Code a functional Verilog implementation of Conway's Game of Life
+ - [CHECK] Code a functional Python implentation of Conway's Game of Life
 ### Planned
- - Create a functional small LED matrix that displays Conway's Game of Life driven by an FPGA
+ - [CHECK, almost] Create a functional small LED matrix that displays Conway's Game of Life driven by an FPGA
 ### Stretch
  - Implement different or user-defined cellular automaton rule sets
  - Use more colors
