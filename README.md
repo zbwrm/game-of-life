@@ -2,6 +2,7 @@
 Authors: Aydin O'Leary (@zbwrm), Alex Butler (@lxbtlr), Sam Cabrera-Valencia (@SamCabV)
 
 The goal of this project is to implement Conway's Game of Life in Verilog and use an FPGA to drive an LED matrix.
+By the deadline, we landed somewhere between Minimum and Planned goals, as significant inroads were made on system integration with the FPGA
 
 ## Deliverables
 ### Minimum
@@ -14,9 +15,11 @@ The goal of this project is to implement Conway's Game of Life in Verilog and us
  - Use more colors
  - Drive larger LED matrices
 
+
+
 ## TODO
- - Python implementation
- - Solidify Verilog -> FPGA workflow (make LED light up)
- - Verilog implementation
+ - ~~Python implementation~~
+ - ~~Solidify Verilog -> FPGA workflow (make LED light up)~~
+ - ~~Verilog implementation~~
  - Drive LED matrix with Verilog
- - Put Verilog implementation onto FPGA
+ - ~~Put Verilog implementation onto FPGA~~
