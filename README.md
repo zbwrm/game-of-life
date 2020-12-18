@@ -3,6 +3,7 @@ Authors: Aydin O'Leary (@zbwrm), Alex Butler (@lxbtlr), Sam Cabrera-Valencia (@S
 
 The goal of this project is to implement Conway's Game of Life in Verilog and use an FPGA to drive an LED matrix.
 By the deadline, we landed somewhere between Minimum and Planned goals, as significant inroads were made on system integration with the FPGA.
+A writeup of this project completed on 12/18/20 is available in `midmortem.pdf`.
 
 
 ## Use
