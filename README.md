@@ -40,6 +40,7 @@ _note: initial conditions of the GOL can be changed in the `matrix.v` file_
  - [CHECK] Code a functional Python implentation of Conway's Game of Life
 ### Planned
  - [CHECK, almost] Create a functional small LED matrix that displays Conway's Game of Life driven by an FPGA
+   - This is almost done, just needs a solid work day of bug-chasing.
 ### Stretch
  - Implement different or user-defined cellular automaton rule sets
  - Use more colors
