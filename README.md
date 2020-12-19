@@ -13,7 +13,14 @@ A writeup of this project completed on 12/18/20 is available in `midmortem.pdf`.
 3. Enable the `on` switch and the clock and watch it go!
 
 ### Python
-Alex write this please god
+To run the example (stock) board:
+1. In the folder, run `constructor.py`
+
+To run a custom board:
+1. Go into `contructor.py` and make a n-by-n 2D array, filled with 1's and 0's.
+2. Next go to the line instantiating the Constructor class `jon = Constructor(bigboard)` and replace bigboard with your 2D array
+3. Run `constructor.py`
+
 
 ### Verilog
 _note: initial conditions of the GOL can be changed in the `matrix.v` file_
